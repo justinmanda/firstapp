@@ -1,0 +1,11 @@
+<h1>Person#edit</h1>
+ <% form_for :person, @person, :url => { :action => "update" } do |f| %>
+<%#= raise @person.inspect %>
+<p> <b>First Name</b><br /> <%= f.text_field :first_name %> </p> 
+<p> <b>Last Name</b><br /> <%= f.text_field :last_name %> </p> 
+<p> <b>DOB </b><br /> <%= f.text_field :dob %> </p> 
+ 
+<%= f.hidden_field :id %>
+<p> <%= f.submit "update person" %> </p> 
+<% end %>
+
